@@ -176,7 +176,7 @@ public class SortedList {
 	 * so each time I add an element it gets sorted.
 	 * @param other SortedList we're going to merge with this list.
 	 */
-	public void add(SortedList other){
+	public void mergeAscending(SortedList other){
 		
 		int counter = 0;
 		Element current = other.first;
@@ -187,6 +187,59 @@ public class SortedList {
 			current = current.getNext();
 			counter++;
 		}
+		
+	}
+	
+	public void addDescending(int value){
+		Element newEl = new Element(value);
+		
+		if(first==null){
+			push(value);
+			return;	
+		}
+			
+		if(newEl.getValue() >= first.getValue()){				
+				push(value);
+				return;
+			}
+		
+		if(newEl.getValue() <= last.getValue()){
+				last.setNext(newEl);
+				last = newEl;
+				size++;
+				return;
+			}
+			
+		Element current = first;			
+		while(current.getNext() != null){
+		// Sorting our element in list.
+			if(newEl.getValue() > current.getNext().getValue() && newEl.getValue() <= current.getValue()){
+					newEl.setNext(current.getNext());
+					current.setNext(newEl);
+					size++;
+					return;
+				}
+			current = current.getNext();
+			}
+		
+			
+		
+	}
+	
+	public SortedList reverse(){
+		SortedList reversedList = new SortedList();
+		
+		Element current = first;
+		int counter = 0;
+		
+		while(counter < size){
+			reversedList.addDescending(current.getValue());
+			current = current.getNext();
+			counter++;
+		}
+		
+		
+		return reversedList;
 		
 	}
 	
