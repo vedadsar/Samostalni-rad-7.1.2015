@@ -14,13 +14,17 @@ public class TestSortedClass {
 		list.add(0);
 		list.add(4);
 		list.add(8);
-		
-		
-		System.out.println(list.toString() + " " +list.getSize());
-		
+				
 		list.removeAt(0);
+		list.removeAt(0);
+		list.removeAt(0);
+
+		Element [] array = list.toArray();
 		
+		for(int i=0; i<array.length; i++){
+			System.out.println(array[i]);
+		}
 		
-		System.out.println(list.toString() + " " +list.getSize());
+	
 	}
 }

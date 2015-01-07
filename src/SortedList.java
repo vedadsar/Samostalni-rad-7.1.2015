@@ -1,9 +1,9 @@
 
 public class SortedList {
 
-	private Element first; // First element in our list
-	private Element last; // Last element in our list
-	private  int size;   // Size of list
+	private Element first;   // First element in our list
+	private Element last;    // Last element in our list
+	private  int size;       // Size of list
 	
 	/**
 	 * Constructor for sorted list.
@@ -132,6 +132,24 @@ public class SortedList {
 	 */
 	public int getSize(){
 		return size;
+	}
+	
+	/**
+	 * Method which returns our list converted to array.
+	 * @return array.
+	 */
+	public Element [] toArray(){
+		Element [] array = new Element [size];
+		
+		Element current = first;
+		
+		for(int i = 0; i<size; i++){
+			array[i] = current;
+			current = current.getNext();
+		}
+		
+		
+		return array;
 	}
 	
 	
