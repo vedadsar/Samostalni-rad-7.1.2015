@@ -220,6 +220,13 @@ public class List {
 	  * @param other other list we want to attach.
 	  */
 	 public void add(List other){
+		
+		 if(this.first == null){
+			first = other.first;
+			 this.size += other.size();
+			return;
+		}
+		
 		 this.last.setNext(other.first);
 		 this.size += other.size();
 	 }
