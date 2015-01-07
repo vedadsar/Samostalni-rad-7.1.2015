@@ -33,8 +33,14 @@ public class TestListClass {
 		
 		test.add("Z");
 		System.out.println("After add: " + test+test.size());
+		test.push(5);
+		test.push(12);
+		test.push(55);
 		
+		Node [] array = test.toArray();
 		
+		for(int i=0; i<array.length; i++)
+			System.out.print(array[i] +" ");
 		
 	}
 }

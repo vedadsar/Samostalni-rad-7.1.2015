@@ -198,4 +198,17 @@ public class List {
 		 return out;
 	 }
 	 
+	 public Node[] toArray(){
+		 Node[] array = new Node[size];
+		 Node current = first;
+		 
+		 for(int i=0; i<size; i++){
+			 array[i] = current;
+			 current = current.getNext();
+		 }
+		 
+		 return array;
+		 
+		 
+	 }
 }
