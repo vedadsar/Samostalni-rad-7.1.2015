@@ -33,6 +33,23 @@ public class SortedList {
 		}
 	}
 	
+	/**
+	 * Method which returns element at index sent as parameter.
+	 * @param index of element in our sorted array we want to return.
+	 * @return element at index.
+	 */
+	public Element getElement(int index){
+		Element current = first;
+		int counter = 0;
+		
+		while( counter < index){
+			current = current.getNext();
+			counter ++;
+		}
+		
+		return current;
+		
+	}
 	
 	/**
 	 * Method which adds and element to our list. This method is adding element in 'sort' way.

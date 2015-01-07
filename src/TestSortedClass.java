@@ -15,15 +15,10 @@ public class TestSortedClass {
 		list.add(4);
 		list.add(8);
 				
-		list.removeAt(0);
-		list.removeAt(0);
-		list.removeAt(0);
+		System.out.println(list.getElement(5));
 
-		Element [] array = list.toArray();
 		
-		for(int i=0; i<array.length; i++){
-			System.out.println(array[i]);
-		}
+	
 		
 	
 	}
