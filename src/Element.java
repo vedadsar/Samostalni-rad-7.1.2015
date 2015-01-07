@@ -22,7 +22,7 @@ public class Element {
 
 	@Override
 	public String toString() {
-		return "Element [value=" + value + "]";
+		return "[" + value + "]";
 	}
 	
 }
