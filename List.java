@@ -197,7 +197,10 @@ public class List {
 		 }
 		 return out;
 	 }
-	 
+	 /**
+	  * Method which creates array and convert list into array.
+	  * @return array which has all elements from list.
+	  */
 	 public Node[] toArray(){
 		 Node[] array = new Node[size];
 		 Node current = first;
@@ -212,6 +215,10 @@ public class List {
 		 
 	 }
 
+	 /**
+	  * Method to attach another list on this one.
+	  * @param other other list we want to attach.
+	  */
 	 public void add(List other){
 		 this.last.setNext(other.first);
 		 this.size += other.size();
