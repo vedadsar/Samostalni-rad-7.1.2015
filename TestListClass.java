@@ -55,9 +55,10 @@ public class TestListClass {
 		second.add(59);
 		second.add(60);
 		
-		//first.add(second);
+		first.add(second);
 		
-		System.out.println(first);
+		System.out.println(first +" " +first.size());
+		
 		
 		
 		
