@@ -2,20 +2,22 @@
 public class TestSortedClass {
 
 	public static void main(String[] args) {
-		SortedList list = new SortedList();
+		SortedList even = new SortedList();
+		SortedList odd = new SortedList();
+
+		even.add(2);
+		even.add(8);
+		even.add(6);
+		even.add(4);
 		
-		list.add(5);
-		list.add(9);
-		list.add(2);
-		list.add(7);
-		list.add(1);
-		list.add(3);
-		list.add(6);
-		list.add(0);
-		list.add(4);
-		list.add(8);
-				
-		System.out.println(list.getElement(5));
+		odd.add(7);
+		odd.add(3);
+		odd.add(1);
+		odd.add(9);
+		
+		even.add(odd);		
+		
+		System.out.println(even.toString() +" " +even.getSize());
 
 		
 	

@@ -39,9 +39,9 @@ public class SortedList {
 	 * @return element at index.
 	 */
 	public Element getElement(int index){
+		
 		Element current = first;
 		int counter = 0;
-		
 		while( counter < index){
 			current = current.getNext();
 			counter ++;
@@ -169,5 +169,24 @@ public class SortedList {
 		return array;
 	}
 	
+	/**
+	 * Method which attach another SortedList to our SortedList.
+	 * I made this by adding one by one element from new list to existing list,
+	 * so each time I add an element it gets sorted.
+	 * @param other SortedList we're going to merge with this list.
+	 */
+	public void add(SortedList other){
+		
+		int counter = 0;
+		Element current = other.first;
+		
+		while(counter < other.getSize()){
+			
+			this.add(current.getValue());
+			current = current.getNext();
+			counter++;
+		}
+		
+	}
 	
 }
