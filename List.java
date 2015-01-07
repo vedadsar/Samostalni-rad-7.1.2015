@@ -211,4 +211,8 @@ public class List {
 		 
 		 
 	 }
+
+	 public void add(List other){
+		 this.last.setNext(other.first);
+	 }
 }
