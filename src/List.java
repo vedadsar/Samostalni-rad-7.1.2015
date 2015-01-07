@@ -1,4 +1,3 @@
-package Emir2;
 
 public class List {
 
@@ -174,8 +173,10 @@ public class List {
 		 return false;
 	 }
 	 	 
+	
 	 @Override // To string method to print whole list
 	 public String toString() {
+
 		 
 		 Node current = first;								//Creating current which will be first
 		 String out = "[";									// Creating output string	
@@ -201,6 +202,7 @@ public class List {
 	  * Method which creates array and convert list into array.
 	  * @return array which has all elements from list.
 	  */
+	
 	 public Node[] toArray(){
 		 Node[] array = new Node[size];
 		 Node current = first;

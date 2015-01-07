@@ -1,4 +1,3 @@
-package Emir2;
 
 public class Node {
 	private  final Object  value;
