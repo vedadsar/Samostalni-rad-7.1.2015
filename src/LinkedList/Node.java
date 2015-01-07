@@ -1,3 +1,4 @@
+package LinkedList;
 
 public class Node {
 	private  final Object  value;
