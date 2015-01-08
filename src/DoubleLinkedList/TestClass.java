@@ -5,7 +5,7 @@ public class TestClass {
 			
 	DoubleList newList = new DoubleList();
 		
-	newList.add(new Node(0));
+	
 	newList.add(new Node(1));
 	newList.add(new Node(2));
 	newList.add(new Node(3));
@@ -15,6 +15,7 @@ public class TestClass {
 	newList.add(new Node(7));
 	newList.add(new Node(8));
 	newList.add(new Node(9));
+	newList.push(new Node(0));
 	
 	System.out.println(" List before removing " +newList.toString());
 	
@@ -22,6 +23,13 @@ public class TestClass {
 	newList.remove(0);
 	
 	System.out.println(" List after removing " +newList.toString());
+	
+	newList.pop();
+	newList.pop();
+	newList.pop();
+	newList.pop();
+
+	System.out.println(" List after 4 pops " +newList.toString());
 	
 	}
 }

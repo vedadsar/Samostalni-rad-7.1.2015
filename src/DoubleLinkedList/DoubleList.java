@@ -136,5 +136,28 @@ public class DoubleList {
 		return out;
 	}
 	
+	/**
+	 * Method which push parameter ( Node ) on first place.
+	 * @param element
+	 */
+	public void push(Node element){
+		if(first == null)
+			first = element;
+		else{
+			element.setNext(first);
+			first.setPrev(element);
+			first = element;
+		}
+	}
+	
+	/**
+	 * Method which removes first element in list.
+	 */
+	public void pop(){
+		if(first == null)
+			throw new IllegalArgumentException("Cannot pop from empty list");
+		else
+			first = first.getNext();
+	}
 		
 }
