@@ -156,6 +156,11 @@ public class DoubleList {
 			first = first.getNext();
 	}
 	
+	/**
+	 * Method which checks if sent parameter exist in our list. 
+	 * @param value value we check if exist in our list.
+	 * @return true if we got value in our list, false if we didnt found value in our list.
+	 */
 	public boolean contains (int value){
 		
 		for(Node current = first; current != null; current = current.getNext()){
