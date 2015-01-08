@@ -21,6 +21,11 @@ public class Node {
 		return prev;
 	}
 
+	@Override
+	public String toString() {
+		return "" + value;
+	}
+
 	public void setPrev(Node prev) {
 		this.prev = prev;
 	}

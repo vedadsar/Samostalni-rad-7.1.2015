@@ -4,27 +4,24 @@ public class TestClass {
 	public static void main(String[] args) {
 			
 	DoubleList newList = new DoubleList();
-	Node n15 = new Node(15);
-	Node n22 = new Node(22);
-	Node n55 = new Node(55);
-	Node n1 = new Node(1);
-	Node n86 = new Node(86);
+		
+	newList.add(new Node(0));
+	newList.add(new Node(1));
+	newList.add(new Node(2));
+	newList.add(new Node(3));
+	newList.add(new Node(4));
+	newList.add(new Node(5));
+	newList.add(new Node(6));
+	newList.add(new Node(7));
+	newList.add(new Node(8));
+	newList.add(new Node(9));
 	
-
+	System.out.println(" List before removing " +newList.toString());
 	
-	newList.add(n15);
+	newList.remove(5);
+	newList.remove(0);
 	
-	newList.add(n22);
+	System.out.println(" List after removing " +newList.toString());
 	
-	newList.add(n55);
-	
-	
-	newList.add(n1);
-	
-	newList.add(n86);
-	
-	System.out.println(n1.getPrev().getValue() + " " +n1.getNext().getValue());
-	System.out.println(newList.toString());
-			
 	}
 }

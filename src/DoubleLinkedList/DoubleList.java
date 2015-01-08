@@ -44,15 +44,54 @@ public class DoubleList {
 			}
 	}
 	
+	/**
+	 * Method which removes an Node from list.
+	 * @param index
+	 * @return
+	 */
+	public Node remove(int index){
 	
-	/*public Node remove(int index){
-		return removedNode;
-	}*/
+		if(index == 0){
+			first = first.getNext();
+		}
+		
+		Node current = first;
+		int counter = 0;
+		
+		while(counter < index -1){
+			current = current.getNext();
+			counter++;
+		}
+		
+		Node prev = current;
+		Node remove = prev.getNext();
+		Node next = remove.getNext();
+		
+		prev.setNext(next);
+		next.setPrev(prev);
+		
+		
+		return current;
+	}
 	
-	/*public Node getElement(int index){
+	/**
+	 * Method which returns an Node at which is at index "index" in our list.
+	 * @param index
+	 * @return
+	 */
+	public Node getElement(int index){
 	
-		return nodeAtIndex;
-	}*/
+		Node current = first;
+		int counter = 0;
+		
+		while(counter < index){
+			current = current.getNext();
+			counter++;
+		}
+		
+		return current;
+	
+	}
 	
 	/**
 	 * Method which returns size of list.
@@ -97,7 +136,5 @@ public class DoubleList {
 		return out;
 	}
 	
-	
-	
-	
+		
 }
