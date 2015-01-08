@@ -91,6 +91,10 @@ public class Deck {
 		return out;
 	}
 	
+	public int getSize(){
+		return size;
+	}
+	
 }
 
 	
