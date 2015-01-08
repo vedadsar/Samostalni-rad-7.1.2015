@@ -49,7 +49,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Player [name=" + name + ", points=" + points + "]";
+		return "["+name + ", points=" + points + "]";
 	}
 	
 	
