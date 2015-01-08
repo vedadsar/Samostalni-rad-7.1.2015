@@ -4,11 +4,12 @@ public class Deck {
 
 	private Card first;
 	private Card last;
-	private int size = 51;
+	private int size ;
 	
 	public Deck(){
 		
 		createDeck();
+		size = 51;
 		
 	}
 	
@@ -40,30 +41,38 @@ public class Deck {
 		
 	}
 	
-		
+	
+	/**
+	 * Method to get access to random card in our deck. Each time card is taken from deck
+	 * the same card is removed from deck. 
+	 * Each time card is taken we decrease size of deck so our random number is getting lower
+	 * each time card is taken.  This method is similar to remove method from usual list.
+	 * @return randomly chosen card.
+	 */
 	public Card getNextCard(){
-		int randomIndex = (int) (Math.random()*size);
-		int counter = 0;
+		
+		int randomIndex = (int) (Math.random()*size); //getting random index of deck
+		int counter = 0;							  			
 		Card current = first;
 		
-		if(randomIndex == 0){
-			size--;
-			Card temp = first;
-			first = first.getNext();
+		if(randomIndex == 0){						 //In case random is 0	
+			size--;									 //Decreasing size		
+			Card temp = first;						//Saving first value into temp
+			first = first.getNext();				//setting new first(removing true first)
 			
-			return temp;
+			return temp;				
 			
 		}
 		
-		while(counter < randomIndex-1 ){
-			current = current.getNext();
+		while(counter < randomIndex-1 ){			//In case randomIndex is not 0
+			current = current.getNext();			//loop till we get to index-1 card
 			counter++;
 		}
-		Card prev = current;
-		Card send = prev.getNext();
-		Card next = send.getNext();
+		Card prev = current;						// index -1 card
+		Card send = prev.getNext();					//card at index we want to remove
+		Card next = send.getNext();					// next card
 		
-		prev.setNext(next);
+		prev.setNext(next);							//Removing card we send.
 		
 		size--;
 		return send;
