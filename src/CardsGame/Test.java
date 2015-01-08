@@ -10,10 +10,17 @@ public class Test  {
 		Table t = new Table();
 		t.addPlayer(new Player("Vedad"));
 		t.addPlayer(new Player("Gorjan"));
-		t.addPlayer(new Player("Haris"));
-		t.addPlayer(new Player("Mirza"));
-		t.addPlayer(new Player("Emir"));
+	
 		
 		System.out.println(t.toString());
+		
+		GameLogic ourGame = new GameLogic(t);
+		for(int i = 0; i < 52; i++){
+		ourGame.makeMove();
+		}
+	
+		System.out.println(t.toString() + " size of deck " +t.getDeck().getSize());
+		
+		
 	}
 }

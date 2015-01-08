@@ -32,6 +32,22 @@ public class Table {
 		}
 	}
 	
+	public Player getFirst() {
+		return first;
+	}
+
+	public void setFirst(Player first) {
+		this.first = first;
+	}
+
+	public Deck getDeck() {
+		return deck;
+	}
+
+	public void setDeck(Deck deck) {
+		this.deck = deck;
+	}
+
 	public String toString(){
 		String out = "";
 		Player current = first;
