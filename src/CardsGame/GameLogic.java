@@ -14,6 +14,14 @@ public class GameLogic {
 		
 	}
 	
+	public Table getTable() {
+		return table;
+	}
+
+	public void setTable(Table table) {
+		this.table = table;
+	}
+
 	public void makeMove(){
 		
 		activePlayer.setHandCard(table.getDeck().getNextCard());
