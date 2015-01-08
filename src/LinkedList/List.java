@@ -1,5 +1,10 @@
 package LinkedList;
 
+/**
+ * Class for creating linked list of nodes.
+ * @author vedadzornic
+ *
+ */
 public class List {
 
 	private Node first;
@@ -233,4 +238,19 @@ public class List {
 		 this.last.setNext(other.first);
 		 this.size += other.size();
 	 }
+	 
+		/**
+		 * Method which checks if sent parameter exist in our list. 
+		 * @param value value we check if exist in our list.
+		 * @return true if we got value in our list, false if we didn't found value in our list.
+		 */
+		public boolean contains (Object value){
+			
+			for(Node current = first; current != null; current = current.getNext()){
+				if(current.getValue().equals(value))
+					return true;
+			}
+			return false;
+			
+		}
 }

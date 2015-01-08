@@ -60,7 +60,7 @@ public class TestListClass {
 		
 		System.out.println(first +" " +first.size());
 		
-		
+		System.out.println(first.contains(60));
 		
 		
 	}
