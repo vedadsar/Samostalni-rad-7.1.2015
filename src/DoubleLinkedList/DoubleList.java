@@ -22,18 +22,14 @@ public class DoubleList {
 	public void add(Node element){
 	
 		if(first == null){							//If our first is null, we added element into blank list.
-				
 				first = element;
 				last = element;
 				size++;
-				
 		}else{										//If our first elemt isn/t null. 
-				
 				Node current = first;
-						
+		
 				while(current.getNext() != null){
 					current = current.getNext();
-					
 				}
 				
 				current.setNext(element);
@@ -158,6 +154,16 @@ public class DoubleList {
 			throw new IllegalArgumentException("Cannot pop from empty list");
 		else
 			first = first.getNext();
+	}
+	
+	public boolean contains (int value){
+		
+		for(Node current = first; current != null; current = current.getNext()){
+			if(current.getValue() == value)
+				return true;
+		}
+		return false;
+		
 	}
 		
 }

@@ -30,6 +30,8 @@ public class TestClass {
 	newList.pop();
 
 	System.out.println(" List after 4 pops " +newList.toString());
+	System.out.println(newList.contains(8));
+	
 	
 	}
 }
