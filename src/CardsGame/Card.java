@@ -39,7 +39,16 @@ public class Card  {
 	public void setValue(int value) {
 		this.value = value;
 	}
+
+	@Override
+	public String toString() {
+		return	 "[ " +getValue()+" of " +getSymbol() +" ]";
+		
+		
+	
+	}
+}
 	
 	
 
-}
+

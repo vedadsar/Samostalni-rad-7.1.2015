@@ -4,14 +4,17 @@ public class Deck {
 
 	private Card first;
 	private Card last;
-	private int size;
+	private int size = 51;
 	
 	public Deck(){
 		
 		createDeck();
-		shuffle();
+		
 	}
 	
+	/**
+	 * Method which creates our cards deck.
+	 */
 	private void createDeck(){
 		first = new Card(2, "TEST");
 		Card current = first;
@@ -37,16 +40,37 @@ public class Deck {
 		
 	}
 	
-	
-	
-	private void shuffle(){
 		
+	public Card getNextCard(){
+		int randomIndex = (int) (Math.random()*size);
+		int counter = 0;
+		Card current = first;
+		
+		if(randomIndex == 0){
+			size--;
+			Card temp = first;
+			first = first.getNext();
+			
+			return temp;
+			
+		}
+		
+		while(counter < randomIndex-1 ){
+			current = current.getNext();
+			counter++;
+		}
+		Card prev = current;
+		Card send = prev.getNext();
+		Card next = send.getNext();
+		
+		prev.setNext(next);
+		
+		size--;
+		return send;
+				
 	}
 	
-	private void addNext(Card card){
-		
-	}
-	
+
 	
 	public String toString(){
 		String out = "";
