@@ -1,5 +1,9 @@
 package DoubleLinkedList;
-
+/**
+ * Class creates Double Linked List.
+ * @author vedadzornic
+ *
+ */
 public class DoubleList {
 
 	private Node first;
@@ -11,25 +15,19 @@ public class DoubleList {
 		last = null;
 		size = 0;
 	}
-	
+	/**
+	 * Method which adds an element into our list. Since its Double linked list, we have to sent previous and next elements.
+	 * @param element
+	 */
 	public void add(Node element){
-		
-		//Node element = new Node(value);
-		
-		if(first == null){
+	
+		if(first == null){							//If our first is null, we added element into blank list.
 				
 				first = element;
 				last = element;
 				size++;
-			
-//			}else if(first.getNext() == null){
-//				
-//				first.setNext(element);	
-//				element.setPrev(first);
-//				last = element;
-//				size++;
-			
-			}else{
+				
+		}else{										//If our first elemt isn/t null. 
 				
 				Node current = first;
 						
@@ -56,10 +54,18 @@ public class DoubleList {
 		return nodeAtIndex;
 	}*/
 	
+	/**
+	 * Method which returns size of list.
+	 * @return
+	 */
 	public int getSize(){
 		return size;
 	}
 	
+	/**
+	 * Method which returns this list converted to array.
+	 * @return
+	 */
 	public Node[] toArray(){
 		
 		Node [] listToArray = new Node[size];
@@ -76,6 +82,9 @@ public class DoubleList {
 		return listToArray;
 	}
 	
+	/**
+	 * To string method which returns our list converted to string.
+	 */
 	public String toString(){
 		Node current = first;
 		String out = "";

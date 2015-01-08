@@ -24,6 +24,7 @@ public class TestClass {
 	newList.add(n86);
 	
 	System.out.println(n1.getPrev().getValue() + " " +n1.getNext().getValue());
+	System.out.println(newList.toString());
 			
 	}
 }
