@@ -22,9 +22,9 @@ public class GameLogic {
 		this.table = table;
 	}
 
-	public void makeMove(){
+	public void makeMove(Card c){
 		
-		activePlayer.setHandCard(table.getDeck().getNextCard());
+		activePlayer.setHandCard(c);
 		
 		if(moveCounter == 0){							//If game just started.
 			previousPlayer = activePlayer;
@@ -49,6 +49,11 @@ public class GameLogic {
 									
 		}
 		
+	}
+
+	public Player getActivePlayer() {
+			
+		return activePlayer;
 	}
 	
 	
