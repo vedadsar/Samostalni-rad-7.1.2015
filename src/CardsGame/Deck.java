@@ -14,7 +14,7 @@ public class Deck {
 	}
 	
 	/**
-	 * Method which creates our cards deck.
+	 * Method which creates our cards deck. 
 	 */
 	private void createDeck(){
 		first = new Card(2, "TEST");
@@ -79,7 +79,6 @@ public class Deck {
 				
 	}
 	
-
 	
 	public String toString(){
 		String out = "";
@@ -91,6 +90,9 @@ public class Deck {
 		return out;
 	}
 	
+	/**
+	 * @return size of deck.
+	 */
 	public int getSize(){
 		return size;
 	}

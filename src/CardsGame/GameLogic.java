@@ -1,5 +1,10 @@
 package CardsGame;
 
+/**
+ * This class is source of our game. It connects all classes and makes move in our game.
+ * @author Vedad_2
+ *
+ */
 public class GameLogic {
 
 	private int moveCounter;
@@ -22,6 +27,11 @@ public class GameLogic {
 		this.table = table;
 	}
 
+	/**
+	 * Method which allows us to make move. This method is setting points of player
+	 * if card he throws is higher then previous card.
+	 * @param c
+	 */
 	public void makeMove(Card c){
 		
 		activePlayer.setHandCard(c);
@@ -52,12 +62,10 @@ public class GameLogic {
 	}
 
 	public Player getActivePlayer() {
-			
-		return activePlayer;
+			return activePlayer;
 	}
 	
-	
-	
+		
 }
 
 

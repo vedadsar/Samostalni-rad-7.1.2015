@@ -1,5 +1,11 @@
 package CardsGame;
-
+/**
+ * Class that creates table of players. It has pointers to first and last player
+ * (that allow us to create circle linked list)
+ * Also contains size of table so we know number of players and deck of card.
+ * @author Vedad_2
+ *
+ */
 public class Table {
 
 	private Player first;
@@ -26,7 +32,7 @@ public class Table {
 			
 			last.setNext(p);			
 			last = p;
-			last.setNext(first);
+			last.setNext(first);				//creating circle linked list.
 			
 			size++;
 		}

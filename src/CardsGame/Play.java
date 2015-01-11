@@ -1,6 +1,10 @@
 package CardsGame;
-
-public class Test {
+/**
+ * Class with main method. In this class we play our game.
+ * @author Vedad_2
+ *
+ */
+public class Play {
 
 public static void main(String[] args) {
 
@@ -8,7 +12,7 @@ public static void main(String[] args) {
 		Table t = new Table();
 		String name = "";
 		
-		do{
+		do{	//Loop for entering players.
 			System.out.println("Enter name / end if want to finish");
 			name = TextIO.getln();	
 			
@@ -22,7 +26,7 @@ public static void main(String[] args) {
 		}while(true);
 		
 		
-		GameLogic ourGame = new GameLogic(t);
+		GameLogic ourGame = new GameLogic(t);		
 		Card  c = ourGame.getTable().getDeck().getNextCard();
 		Player p = ourGame.getActivePlayer();
 		
@@ -30,7 +34,7 @@ public static void main(String[] args) {
 		String activePlayer;
 		int cardValue ;
 		
-		do{
+		do{		//Loop for making moves.
 			
 			activePlayer = p.getName();
 			cardValue = c.getValue();
@@ -47,7 +51,7 @@ public static void main(String[] args) {
 			System.out.println("" +activePlayer + " throws card with value " +cardValue);
 			ourGame.makeMove(c);
 			p = p.getNext();
-			 c = ourGame.getTable().getDeck().getNextCard();
+			c = ourGame.getTable().getDeck().getNextCard();
 			
 			}
 			
@@ -58,8 +62,8 @@ public static void main(String[] args) {
 			
 		}while(true);
 				
-		System.out.println(t.toString() + " size of deck " );
+		System.out.println(t.toString());
 		
 		
-}
+	}
 }

@@ -1,5 +1,9 @@
 package CardsGame;
-
+/**
+ * Class that creates card. Object card has symbol, value and pointer to next card.
+ * @author Vedad_2
+ *
+ */
 public class Card  {
 	private String symbol;
 	private int value;

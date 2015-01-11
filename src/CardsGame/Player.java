@@ -1,5 +1,10 @@
 package CardsGame;
-
+/**
+ * Class which creates player. Contains players name, points, card which player throws and 
+ * pointer to next player.
+ * @author Vedad_2
+ *
+ */
 public class Player {
 	
 	private String name;
@@ -44,8 +49,6 @@ public class Player {
 	public void setNext(Player next) {
 		this.next = next;
 	}
-
-	
 
 	@Override
 	public String toString() {
